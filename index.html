@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rishabh Gulechha</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f2027;
+      background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+      color: #f2f2f2;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #1c1c1c;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      display: none;
+      padding: 2rem;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h1 {
+      color: #FFD700;
+      margin-top: 2rem;
+    }
+
+    .btn {
+      margin: 1rem;
+      padding: 0.7rem 1.5rem;
+      background-color: #00ffff;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #00cccc;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('education')">Education</a>
+    <a href="#" onclick="showSection('certifications')">Certifications</a>
+    <a href="#" onclick="showSection('contact')">Contact</a>
+  </nav>
+
+  <section id="home" class="active">
+    <h1>Rishabh Gulechha</h1>
+    <p>Hi! I'm Rishabh, a passionate student and developer. I love coding, creating projects, and learning about AI and automation.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>B.Tech:</strong> Electrical, Electronics and Communications Engineering – MIT World Peace University, Pune</p>
+    <p><strong>B.Sc:</strong> Computer Science – BITS Pilani</p>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul style="list-style: none;">
+      <li>Google Cloud Fundamentals & Generative AI Arcade Game Level 3</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Connect with me</h2>
+    <a class="btn" href="https://www.instagram.com/rishabh_gulechha2105/" target="_blank">Instagram</a>
+    <a class="btn" href="https://www.linkedin.com/in/rishabh-gulechha-5395a9273/" target="_blank">LinkedIn</a>
+  </section>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => {
+        sec.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
